@@ -1,0 +1,183 @@
+/* ============================================================
+   SUPPORT DOCS COPILOT
+   Custom Styles
+   ============================================================ */
+
+
+/* Smooth page rendering */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Main body */
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+
+/* Prevent horizontal overflow */
+body {
+    overflow-x: hidden;
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* Textarea */
+textarea {
+    resize: none;
+    outline: none;
+}
+
+
+/* File upload zone */
+#dropZone {
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#dropZone:hover {
+    transform: translateY(-1px);
+}
+
+
+/* Buttons */
+button {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Message animation */
+@keyframes messageFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+#messageList > div {
+    animation: messageFadeIn 0.25s ease-out;
+}
+
+
+/* Typing animation */
+@keyframes typingDot {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    30% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+
+}
+
+
+.typing-dot {
+    animation: typingDot 1.2s infinite;
+}
+
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+/* Upload progress animation */
+@keyframes progressPulse {
+
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+
+}
+
+
+#uploadProgressBar {
+    animation: progressPulse 1.5s infinite;
+}
+
+
+/* Toast */
+#toast {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* Mobile sidebar */
+@media (max-width: 767px) {
+
+    #sidebar {
+        position: fixed;
+        z-index: 50;
+    }
+
+}
+
+
+/* Prevent buttons from shrinking */
+button {
+    flex-shrink: 0;
+}
